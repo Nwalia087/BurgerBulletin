@@ -33,7 +33,7 @@ export class NewsContainer extends Component {
 
     this.setState({ loading: true });
 
-    const url = `https://newsapi.org/v2/top-headlines?country=in&category=${catagory}&apiKey=5aacd7c809874e2ca2b465c212db5b5a&page=${page}&pageSize=${pageSize}`;
+    const url = `https://newsapi.org/v2/top-headlines?country=in&category=${catagory}&apiKey=${this.props.ApiKey}&page=${page}&pageSize=${pageSize}`;
     const data = await fetch(url);
     const parsedData = await data.json();
 
@@ -56,7 +56,7 @@ export class NewsContainer extends Component {
 
     this.setState({ loading: true });
 
-    const url = `https://newsapi.org/v2/top-headlines?country=in&category=${catagory}&apiKey=5aacd7c809874e2ca2b465c212db5b5a&page=1&pageSize=${this.state.pageSize}`;
+    const url = `https://newsapi.org/v2/top-headlines?country=in&category=${catagory}&apiKey=${this.props.ApiKey}&page=1&pageSize=${this.state.pageSize}`;
     const data = await fetch(url);
     this.props.setProgress(30);
     const parsedData = await data.json();
