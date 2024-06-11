@@ -7,9 +7,9 @@ export class NavBar extends Component {
       <div>
         <nav className="navbar navbar-expand-lg bg-white">
           <div className="container-fluid">
-            <a className="navbar-brand d-flex align-middle" href="#">
+            <a className="navbar-brand d-flex align-middle" href="/">
               <img
-                src="/vegan-burger.png"
+                src={`${process.env.PUBLIC_URL}/vegan-burger.png`}
                 alt="Logo"
                 width="40"
                 height="40"
@@ -32,7 +32,7 @@ export class NavBar extends Component {
                 <li className="nav-item dropdown">
                   <a
                     className="nav-link dropdown-toggle"
-                    href="#"
+                    href="/"
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false">

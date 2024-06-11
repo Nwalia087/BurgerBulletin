@@ -51,13 +51,16 @@ export class NewsContainer extends Component {
   };
 
   async updatePage() {
+    this.props.setProgress(10);
     const { catagory } = this.props;
 
     this.setState({ loading: true });
 
     const url = `https://newsapi.org/v2/top-headlines?country=in&category=${catagory}&apiKey=5aacd7c809874e2ca2b465c212db5b5a&page=1&pageSize=${this.state.pageSize}`;
     const data = await fetch(url);
+    this.props.setProgress(30);
     const parsedData = await data.json();
+    this.props.setProgress(50);
 
     this.activeclass();
     this.setState({
@@ -66,6 +69,7 @@ export class NewsContainer extends Component {
       loading: false,
       page: 2,
     });
+    this.props.setProgress(100);
   }
 
   async componentDidMount() {
@@ -81,7 +85,7 @@ export class NewsContainer extends Component {
   render() {
     return (
       <>
-        <h1 className="h1 text-center" style={{textTransform:"capitalize"}}>
+        <h1 className="h1 text-center" style={{ textTransform: "capitalize" }}>
           Burger Bulletin - {this.props.catagory} news
         </h1>
         {this.state.loading && <Loading />}
@@ -89,7 +93,7 @@ export class NewsContainer extends Component {
           dataLength={this.state.articles.length}
           next={this.fetchMoreData}
           hasMore={this.state.articles.length < this.state.totalResults}
-          loader={<h4>Loading...</h4>}>
+          loader={<h4 className="text-center">Loading...</h4>}>
           <div className="container justify-content-evenly d-flex flex-wrap">
             {this.state.articles
               .filter((element) => element.title && element.description && element.url && element.urlToImage)
