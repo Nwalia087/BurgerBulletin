@@ -12,7 +12,7 @@ export class NewsItem extends Component {
           style={{ top: "3%", left: "1%" }}>
           {source}
         </span>
-        <div className="card mx-2 my-4" style={{ width: "24rem" }}>
+        <div className="card mx-2 my-4" >
           <div className="news-img-container">
             <div
               className="news-img"

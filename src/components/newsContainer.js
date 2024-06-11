@@ -94,7 +94,7 @@ export class NewsContainer extends Component {
           next={this.fetchMoreData}
           hasMore={this.state.articles.length < this.state.totalResults}
           loader={<h4 className="text-center">Loading...</h4>}>
-          <div className="container justify-content-evenly d-flex flex-wrap">
+          <div className="container justify-content-center justify-content-lg-evenly d-flex flex-wrap">
             {this.state.articles
               .filter((element) => element.title && element.description && element.url && element.urlToImage)
               .map((element) => (
