@@ -72,7 +72,7 @@ const NewsContainer = (props) => {
 
   return (
     <>
-      <h1 className="h1 text-center" style={{ textTransform: "capitalize" }}>
+      <h1 className="h1 text-center" style={{ textTransform: "capitalize", marginTop: "50px" }}>
         Burger Bulletin - {props.catagory} news
       </h1>
       {loading && <Loading />}
