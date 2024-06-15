@@ -7,7 +7,7 @@ const NavBar = (props) => {
         <div className="container-fluid">
           <a className="navbar-brand d-flex align-middle" href="/">
             <img
-              src={`${process.env.PUBLIC_URL}/vegan-burger.png`}
+              src={`/vegan-burger.png`}
               alt="Logo"
               width="40"
               height="40"

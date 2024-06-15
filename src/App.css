@@ -2,7 +2,7 @@
   text-align: center;
 }
 body {
-  background-image: url("/public/body-bg.png");
+  background-image: url("/body-bg.png");
   background-repeat: repeat;
   background-size: 30%;
   background-position: center;
