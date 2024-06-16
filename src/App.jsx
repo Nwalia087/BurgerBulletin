@@ -9,7 +9,7 @@ const App = () => {
   const [catagory, setCatagory] = useState("general");
   const [progress, setProgress] = useState("general");
 
-  const ApiKey = "4824b9d1b70b4763b95ee1231b33529a";
+  const ApiKey = import.meta.env.VITE_API_KEY;
   const handleDropdownClick = (event) => {
     const selectedOption = event.target.getAttribute("data-option");
     if (selectedOption) {
