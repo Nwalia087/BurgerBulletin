@@ -7,7 +7,7 @@ const NavBar = (props) => {
         <div className="container-fluid">
           <a className="navbar-brand d-flex align-middle" href="/">
             <img
-              src={`/vegan-burger.png`}
+              src="./public/vegan-burger.png"
               alt="Logo"
               width="40"
               height="40"
