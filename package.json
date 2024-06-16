@@ -1,6 +1,6 @@
 {
-  "homepage": "https://nwalia087.github.io/burgerBulletin",
-  "name": "news-monkey",
+  "homepage": "https://nwalia087.github.io/BurgerBulletin",
+  "name": "burger-bulletin",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

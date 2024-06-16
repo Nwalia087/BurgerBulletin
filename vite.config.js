@@ -9,7 +9,7 @@ export default defineConfig({
   build: {
     outDir: "build",
   },
-  base:"/burgerBulletin/",
+  base:"/BurgerBulletin/",
   plugins: [
     reactRefresh(),
     svgrPlugin({
